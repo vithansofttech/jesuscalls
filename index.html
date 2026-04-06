@@ -93,7 +93,7 @@ button {
 </div>
 
 <script>
-// LOVE TEXT
+// LOVE TEXT (Tamil / Bible messages)
 var loveLines = [
 "💖 மனந்திரும்புங்கள், பரலோகராஜ்யம் சமீபித்திருக்கிறது என்று பிரசங்கம்பண்ணினான்",
 "🌹 இயேசுவைக் கிறிஸ்து அல்ல என்று மறுதலிக்கிறவனேயல்லாமல் வேறே யார் பொய்யன்? பிதாவையும் குமாரனையும் மறுதலிக்கிறவனே அந்திக்கிறிஸ்து. (I யோவான் 2 : 22)",
@@ -119,15 +119,15 @@ function generateLove(){
   document.getElementById("loveImage").src = images[img];
 
   if(name != ""){
-    document.getElementById("loveText").innerHTML = "💌 " + name + ", " + loveLines[r];
+    document.getElementById("loveText").textContent = "💌 " + name + ", " + loveLines[r];
   } else {
-    document.getElementById("loveText").innerHTML = loveLines[r];
+    document.getElementById("loveText").textContent = loveLines[r];
   }
 }
 
 // WHATSAPP SHARE
 function shareWhatsApp(){
-  var text = document.getElementById("loveText").innerText;
+  var text = document.getElementById("loveText").textContent;
   var link = "https://jesuscalls.vercel.app/";
   var url = "https://wa.me/?text=" + encodeURIComponent(text + " 💖\n" + link);
   window.open(url, "_blank");
