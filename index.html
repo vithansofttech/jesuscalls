@@ -93,25 +93,20 @@ button {
 </div>
 
 <script>
-// LOVE TEXT (Tamil / Bible messages)
+// Only Tamil / Bible messages
 var loveLines = [
 "💖 மனந்திரும்புங்கள், பரலோகராஜ்யம் சமீபித்திருக்கிறது என்று பிரசங்கம்பண்ணினான்",
 "🌹 இயேசுவைக் கிறிஸ்து அல்ல என்று மறுதலிக்கிறவனேயல்லாமல் வேறே யார் பொய்யன்? பிதாவையும் குமாரனையும் மறுதலிக்கிறவனே அந்திக்கிறிஸ்து. (I யோவான் 2 : 22)",
 "💌 சாலொமோன் எகிப்தின் ராஜாவாகிய பார்வோனோடே சம்பந்தங்கலந்து, பார்வோனின் குமாரத்தியை விவாகம்பண்ணி, தன்னுடைய அரமனையையும் கர்த்தருடைய ஆலயத்தையும் எருசலேமின் சுற்றுமதிலையும் கட்டித் தீருமட்டும் அவன் அவளைத் தாவீதின் நகரத்தில் கொண்டுவந்து வைத்தான்."
 ];
 
-// AUTO TEXT
-for (var i=0; i<1000; i++){
-  loveLines.push("💖 I love you forever " + (i+1));
-}
-
-// IMAGES
+// Images
 var images = [
 "https://i.pinimg.com/originals/34/09/e8/3409e8f0d2dc7a3d71b6cfde90e8c676.jpg",
 "https://i.pinimg.com/236x/67/f8/bf/67f8bf81e90de7c71469e206747a99cc.jpg"
 ];
 
-// GENERATE
+// Generate random message + image
 function generateLove(){
   var name = document.getElementById("nameInput").value;
   var r = Math.floor(Math.random()*loveLines.length);
@@ -125,7 +120,7 @@ function generateLove(){
   }
 }
 
-// WHATSAPP SHARE
+// WhatsApp share (text only, Tamil safe)
 function shareWhatsApp(){
   var text = document.getElementById("loveText").textContent;
   var link = "https://jesuscalls.vercel.app/";
@@ -133,7 +128,7 @@ function shareWhatsApp(){
   window.open(url, "_blank");
 }
 
-// DOWNLOAD IMAGE
+// Download image
 function downloadStatus(){
   var img = document.getElementById("loveImage").src;
   var a = document.createElement("a");
