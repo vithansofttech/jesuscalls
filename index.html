@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+
+<title>💖Jesus Calls💖</title>
+
+<!-- WhatsApp Preview -->
+<meta content='💖 Special Love Message For You' property='og:title'/>
+<meta content='Click to see your love message 💌' property='og:description'/>
+<meta content='https://i.ibb.co/3W3sK8G/love.jpg' property='og:image'/>
+<meta content='https://jesuscallsprayer.blogspot.com/' property='og:url'/>
+<meta content='website' property='og:type'/>
+
+<style>
+
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #d3d3d3);
+  text-align:center;
+  color:#333;
+}
+
+header img {
+  max-width:180px;
+  width:60%;
+  margin-top:20px;
+}
+
+.card {
+  margin:20px auto;
+  padding:15px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  width:90%;
+  max-width:400px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+#loveImage {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:15px;
+  margin-bottom:10px;
+}
+
+h2 {
+  font-size:18px;
+  margin:10px 0;
+}
+
+input {
+  width:90%;
+  padding:10px;
+  border-radius:20px;
+  border:none;
+  outline:none;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+button {
+  width:90%;
+  padding:12px;
+  margin:6px 0;
+  border:none;
+  border-radius:25px;
+  font-size:14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.generate { background:#ff4d6d; color:white; }
+.whatsapp { background:#25D366; color:white; }
+.download { background:#007bff; color:white; }
+
+@media (max-width:480px) {
+  #loveImage { height:200px; }
+  h2 { font-size:16px; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <img src='https://www.kindpng.com/picc/m/219-2193604_jesus-physician-png-jesus-calls-ministry-logo-transparent.png'/>
+</header>
+
+<div class='card'>
+
+<img id='loveImage' src='https://s45600.pcdn.co/wp-content/uploads/2023/09/3.21.22_JesusClaimsThatHeIsGod-1024x683-1.jpg'/>
+
+<h2 id='loveText'>Click generate ❤️</h2>
+
+<input id='nameInput' placeholder='Enter name 💌'/>
+
+<button class='generate' onclick='generateLove()'>Generate 💖</button>
+<button class='whatsapp' onclick='shareWhatsApp()'>Share WhatsApp 📲</button>
+<button class='download' onclick='downloadStatus()'>Download Status 📥</button>
+
+</div>
+
+<script>
+
+// LOVE TEXT
+var loveLines = [
+"💖 You are my heart",
+"🌹 I love you forever",
+"💌 You are my happiness"
+];
+
+// AUTO TEXT
+for (var i = 0; i < 1000; i++) {
+ loveLines.push("💖 I love you forever " + (i+1));
+}
+
+// IMAGES
+var images = [
+"https://i.pinimg.com/originals/34/09/e8/3409e8f0d2dc7a3d71b6cfde90e8c676.jpg",
+"https://i.pinimg.com/236x/67/f8/bf/67f8bf81e90de7c71469e206747a99cc.jpg"
+];
+
+// GENERATE
+function generateLove() {
+ var name = document.getElementById("nameInput").value;
+ var r = Math.floor(Math.random()*loveLines.length);
+ var img = Math.floor(Math.random()*images.length);
+
+ document.getElementById("loveImage").src = images[img];
+
+ if(name != ""){
+   document.getElementById("loveText").innerHTML =
+   "💌 " + name + ", " + loveLines[r];
+ } else {
+   document.getElementById("loveText").innerHTML = loveLines[r];
+ }
+}
+
+// WHATSAPP SHARE
+function shareWhatsApp() {
+ var text = document.getElementById("loveText").innerText;
+ var link = "https://yourblog.blogspot.com/";
+
+ var url = "https://wa.me/?text=" + encodeURIComponent(text + " 💖\n" + link);
+ window.open(url, "_blank");
+}
+
+// DOWNLOAD IMAGE
+function downloadStatus() {
+ var img = document.getElementById("loveImage").src;
+
+ var a = document.createElement("a");
+ a.href = img;
+ a.download = "love-status.jpg";
+ a.click();
+}
+
+</script>
+
+</body>
+</html>
